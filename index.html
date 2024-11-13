@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem Solving</title>
+</head>
+<body style="background-color: aqua;">
+    <h2>1.Remove duplicates in an array.</h2>
+    <h2>2.Count the number of occurrences  elements in an array and display in an object.</h2>
+
+
+    <script>
+      
+// Task:
+// 1. Remove duplicates in an array.
+
+let array1 = [1, 2, 2, 3, 4, 4, 5];
+let uniqueArray = [];
+
+for (let i = 0; i < array1.length; i++) {
+    let isDuplicate = false;
+    for (let j = 0; j < uniqueArray.length; j++) {
+        if (array1[i] === uniqueArray[j]) {
+            isDuplicate = true;
+            break;
+        }
+    }
+    if (!isDuplicate) {
+        uniqueArray.push(array1[i]);
+    }
+}
+
+console.log(`After removing duplicates Array is ${uniqueArray}`);
+
+
+
+// 2. Count the number of occurrences  elements in an array and display in an object.
+
+let array2 = [1, 2, 2, 3, 3, 3, 6, 6, 6, 6];
+let occurrences = {};
+
+for (let i = 0; i < array2.length; i++) {
+    let element = array2[i];
+    if (occurrences[element] === undefined) {
+        occurrences[element] = 1;
+    } else {
+        occurrences[element]++;
+    }
+}
+
+console.log(occurrences);
+
+
+
+
+    </script>
+</body>
+</html>
